@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic table for product cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-lg md:px-12">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">Dynamic Cart</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="images/shovan.png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mt-5 px-12 grid grid grid-cols-2 gap-5">
+            <!-- card section -->
+            <div class="grid grid-cols-2 gap-5">
+                <div class="card w-full bg-base-300 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img class="w-full h-full" src="images/shoe2.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="title1" class="card-title">converts!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price:$ <span id="price1">700</span></p>
+                      <input id="input1" type="number" placeholder="Quantity" class="bg-black text-white pl-2">
+                      <div class="card-actions">
+                        <button id="btn1" class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-300 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img class="w-full h-full" src="images/shoe3.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="title2" class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price:$ <span id="price2">850</span></p>
+                      <input id="input2" type="number" placeholder="Quantity" class="bg-black text-white pl-2">
+                      <div class="card-actions">
+                        <button id="btn2" class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-300 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img class="w-full h-full" src="images/shoe1.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="title3" class="card-title">Snaker!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>price:$ <span id="price3">800</span></p>
+                      <input id="input3" type="number" placeholder="Quantity" class="bg-black text-white pl-2">
+                      <div class="card-actions">
+                        <button id="btn3" class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- table section -->
+            <div>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <h1 class="text-center text-3xl mb-5 font-semibold">Your cart</h1>
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Product name</th>
+                          <th>Product price</th>
+                          <th>Product Quantity</th>
+                          <th>Total price</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table">
+                        <!-- <tr>
+                          <th>3</th>
+                          <td>Brice Swyre</td>
+                          <td>Tax Accountant</td>
+                          <td>Red</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
